@@ -255,7 +255,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
-                Log.i(TAG, "TWO PRESSED!");
+                taiChiGame();
                 new Thread(new Runnable() {
                     public void run() {
                         try {
@@ -276,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
+                taiChiGame();
                 new Thread(new Runnable() {
                     public void run() {
                         try {
@@ -296,6 +297,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
+                taiChiGame();
                 new Thread(new Runnable() {
                     public void run() {
                         try {
@@ -316,6 +318,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
+                taiChiGame();
                 new Thread(new Runnable() {
                     public void run() {
                         try {
@@ -388,13 +391,13 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
         final FinalCounter breath = new FinalCounter(1);
 
         try {
-            bandClient.getNotificationManager().showDialog(UserStatus.tileUUID, "Get ready for:", "Tai Chi Game!").await();
+            bandClient.getNotificationManager().showDialog(UserStatus.tileUUID, "Get ready for", "a new movement!").await();
             Thread.sleep(4 * 1000);
         } catch (Exception e) {
         }
 
         try {
-            bandClient.getNotificationManager().showDialog(UserStatus.tileUUID, "Game Has", "Started").await();
+            bandClient.getNotificationManager().showDialog(UserStatus.tileUUID, "Movement has", "started").await();
             bandClient.getNotificationManager().vibrate(VibrationType.ONE_TONE_HIGH);
         } catch (Exception e) {
             e.printStackTrace();
