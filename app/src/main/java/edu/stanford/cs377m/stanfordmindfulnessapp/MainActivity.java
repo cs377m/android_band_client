@@ -240,6 +240,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                     InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 } catch (Exception e) {}
+                writeToFile("ACTIVITY1" + "\n", UserStatus.currUser + ".txt");
             }
         });
 
@@ -255,6 +256,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                     InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 } catch (Exception e) {}
+                writeToFile("ACTIVITY2" + "\n", UserStatus.currUser + ".txt");
             }
         });
 
@@ -270,6 +272,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                     InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 } catch (Exception e) {}
+                writeToFile("ACTIVITY3" + "\n", UserStatus.currUser + ".txt");
             }
         });
 
@@ -285,6 +288,7 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                     InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 } catch (Exception e) {}
+                writeToFile("ACTIVITY4" + "\n", UserStatus.currUser + ".txt");
             }
         });
 
@@ -300,6 +304,27 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                     InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 } catch (Exception e) {}
+                writeToFile("ACTIVITY5" + "\n", UserStatus.currUser + ".txt");
+            }
+        });
+
+        final Button startButton = (Button) findViewById(R.id.startButton);
+        startButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // Log start of user test for a particular user.
+                writeToFile("START" + "\n", UserStatus.currUser + ".txt");
+            }
+        });
+
+        final Button stopButton = (Button) findViewById(R.id.stopButton);
+        stopButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // Log end of user test for a particular user.
+                writeToFile("END" + "\n", UserStatus.currUser + ".txt");
             }
         });
 

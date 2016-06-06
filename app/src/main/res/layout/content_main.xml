@@ -169,5 +169,27 @@
         android:text="Update User"
         android:theme="@style/MyButton" />
 
+    <Button
+        android:id="@+id/startButton"
+        android:layout_below="@id/textView5"
+        android:layout_toLeftOf="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/meditate_now_button"
+        android:text="Start"
+        android:theme="@style/MyButton" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_below="@id/textView5"
+        android:layout_toRightOf="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/meditate_now_button"
+        android:text="Stop"
+        android:theme="@style/MyButton" />
+
 
 </RelativeLayout>
