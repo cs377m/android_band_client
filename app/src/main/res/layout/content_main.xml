@@ -27,12 +27,12 @@
         android:layout_height="20dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="  "
-        android:id="@+id/textView3"
+        android:id="@+id/textView20"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/imageButton3"
-        android:layout_below="@id/textView3"
+        android:id="@+id/imageButton20"
+        android:layout_below="@id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -41,9 +41,66 @@
         android:theme="@style/MyButton" />
 
     <TextView
-        android:layout_below="@id/imageButton3"
+        android:layout_below="@id/imageButton20"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="2dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="  "
+        android:id="@+id/textView21"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/imageButton21"
+        android:layout_below="@id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/add_button"
+        android:text="Tai Chi Movement 2"
+        android:theme="@style/MyButton" />
+
+    <TextView
+        android:layout_below="@id/imageButton21"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="  "
+        android:id="@+id/textView22"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/imageButton22"
+        android:layout_below="@id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/add_button"
+        android:text="Tai Chi Movement 3"
+        android:theme="@style/MyButton" />
+
+    <TextView
+        android:layout_below="@id/imageButton22"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="  "
+        android:id="@+id/textView23"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/imageButton23"
+        android:layout_below="@id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/add_button"
+        android:text="Tai Chi Movement 4"
+        android:theme="@style/MyButton" />
+
+    <TextView
+        android:layout_below="@id/imageButton23"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="  "
         android:id="@+id/textView2"

@@ -228,22 +228,78 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
 
         this.activity = this;
 
-        final Button addButton = (Button) findViewById(R.id.imageButton3);
-        addButton.setOnClickListener(new View.OnClickListener() {
+        final Button movementOne = (Button) findViewById(R.id.imageButton20);
+        movementOne.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
                 taiChiGame();
+                try {
+                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/1");
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                } catch (Exception e) {}
             }
         });
 
-        final Button settingsButton = (Button) findViewById(R.id.imageButton4);
-        settingsButton.setOnClickListener(new View.OnClickListener() {
+        final Button movementTwo = (Button) findViewById(R.id.imageButton20);
+        movementTwo.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
+                taiChiGame();
+                try {
+                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/2");
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                } catch (Exception e) {}
+            }
+        });
+
+        final Button movementThree = (Button) findViewById(R.id.imageButton20);
+        movementThree.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // Start activity on HoloLens.
+                taiChiGame();
+                try {
+                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/3");
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                } catch (Exception e) {}
+            }
+        });
+
+        final Button movementFour = (Button) findViewById(R.id.imageButton20);
+        movementFour.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // Start activity on HoloLens.
+                taiChiGame();
+                try {
+                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/4");
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                } catch (Exception e) {}
+            }
+        });
+
+        final Button movementFive = (Button) findViewById(R.id.imageButton4);
+        movementFive.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // Start activity on HoloLens.
+                taiChiGame();
+                try {
+                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/5");
+                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                } catch (Exception e) {}
             }
         });
 
