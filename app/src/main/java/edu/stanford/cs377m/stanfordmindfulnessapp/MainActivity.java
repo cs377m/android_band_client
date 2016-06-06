@@ -235,59 +235,77 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
             public void onClick(View view) {
                 // Start activity on HoloLens.
                 taiChiGame();
-                try {
-                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/1");
-                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                } catch (Exception e) {}
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/1");
+                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                        } catch (Exception e) { e.printStackTrace(); }
+                    }
+                }).start();
+
                 writeToFile("ACTIVITY1" + "\n", UserStatus.currUser + ".txt");
             }
         });
 
-        final Button movementTwo = (Button) findViewById(R.id.imageButton20);
+        final Button movementTwo = (Button) findViewById(R.id.imageButton21);
         movementTwo.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
-                taiChiGame();
-                try {
-                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/2");
-                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                } catch (Exception e) {}
+                Log.i(TAG, "TWO PRESSED!");
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/2");
+                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                        } catch (Exception e) { e.printStackTrace(); }
+                    }
+                }).start();
+
                 writeToFile("ACTIVITY2" + "\n", UserStatus.currUser + ".txt");
             }
         });
 
-        final Button movementThree = (Button) findViewById(R.id.imageButton20);
+        final Button movementThree = (Button) findViewById(R.id.imageButton22);
         movementThree.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
-                taiChiGame();
-                try {
-                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/3");
-                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                } catch (Exception e) {}
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/3");
+                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                        } catch (Exception e) { e.printStackTrace(); }
+                    }
+                }).start();
+
                 writeToFile("ACTIVITY3" + "\n", UserStatus.currUser + ".txt");
             }
         });
 
-        final Button movementFour = (Button) findViewById(R.id.imageButton20);
+        final Button movementFour = (Button) findViewById(R.id.imageButton23);
         movementFour.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
-                taiChiGame();
-                try {
-                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/4");
-                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                } catch (Exception e) {}
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/4");
+                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                        } catch (Exception e) { e.printStackTrace(); }
+                    }
+                }).start();
+
                 writeToFile("ACTIVITY4" + "\n", UserStatus.currUser + ".txt");
             }
         });
@@ -298,12 +316,16 @@ public class MainActivity extends AppCompatActivity implements HeartRateConsentL
             @Override
             public void onClick(View view) {
                 // Start activity on HoloLens.
-                taiChiGame();
-                try {
-                    URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/5");
-                    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                } catch (Exception e) {}
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            URL url = new URL("http://ec2-54-165-135-172.compute-1.amazonaws.com/change_activity/5");
+                            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                        } catch (Exception e) { e.printStackTrace(); }
+                    }
+                }).start();
+
                 writeToFile("ACTIVITY5" + "\n", UserStatus.currUser + ".txt");
             }
         });
